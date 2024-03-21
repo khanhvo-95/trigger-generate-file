@@ -1,0 +1,10 @@
+paths:
+  uploadCoiPath: "https://azuredatauploadservice.azurewebsites.net/api/v1/documents"
+  downloadCoiPath: "https://triggerazuregeneratefile.azurewebsites.net/api/v1/files"
+spring:
+  cloud:
+    azure:
+      servicebus:
+        connection-string: ${SERVICE_BUS_QUEUE_CONNECTION}
+      web-jobs-storage: UseDevelopmentStorage=true
+      functions-worker-runtime: java
